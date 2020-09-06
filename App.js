@@ -37,7 +37,9 @@ roomSocket.on('connection',(socket)=>{
         // Broadcast or save last seen
     });
 });
-const port = process.env.PORT || config.PORT
+const port = process.env.PORT || config.PORT 
+
+// Listen & Serve!!
 httpServer.listen(port, ()=>{
     console.log(`Server's Listening on *:${port}`)
 })
