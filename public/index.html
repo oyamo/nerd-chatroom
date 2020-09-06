@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta 
+        name="description" 
+        content="Simple Chatting Application Powered By javascript."
+    />
+    <link rel="stylesheet" href="/App.css"/>
+    <title>Room Chat</title>
+
+</head>
+<body>
+    <h1>Nerds chatroom </h1>
+    <hr>
+    <noscript> This app requires javascript activation</noscript>
+    <ul class="messeges">
+        <br>
+        <br>
+        <p>Its Quiet here, start by saying hi, </p>
+    </ul>
+    <form>
+        <input type="text" placeholder="Type here"/>
+        <button>Send</button>
+    </form>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        
+        const chat = () =>{
+            var socket = io();
+            const inputField = document.querySelector('input');
+            const form = document.querySelector('form');
+            const ul = document.querySelector('ul');
+            let empty = true;
+            // Ask For Username
+
+            let Username = '';
+            // <UtilityFunctions>
+            // Gets Username
+            const inquireUsername  = (msg = "Howdy? Enter your username") => {
+                while(Username == 0){
+                    Username = prompt(msg);
+                }
+            }
+            // 
+            const displayMessage =(msg) =>{
+                console.log(msg)
+                const {username, message, time} = msg;
+                var li = document.createElement('li');
+                const tempTime =  new Date(time);
+                const prettyTime = `${tempTime.getHours() + 3}:${tempTime.getMinutes()}`;
+                var userDiv = document.createElement('div');
+                var messageDiv = document.createElement('div');
+                userDiv.classList.add('username');
+                userDiv.appendChild(document.createTextNode(username+"    " + prettyTime))
+                messageDiv.appendChild(document.createTextNode(message))
+                li.appendChild(userDiv)
+                li.appendChild(messageDiv);
+
+                // Clear Everything for the first time
+                if(empty){
+                    ul.innerHTML = "";
+                    empty = false;
+                }
+                // Update the classlist to display Color
+                if(Username == username ){
+                    li.classList.add("me-box")
+                }else{
+                    li.classList.add("recipient-box");
+                }
+                ul.appendChild(li);
+                console.log(msg)
+            
+            }
+            // </UtilityFunctions>
+            
+            // < ConsumeTheFunctions > 
+            inquireUsername()
+            socket.on('broadcast',msg=>{
+                        displayMessage(msg);
+            })
+            // </Consume The Functions >
+
+            // Add a submit listener to the form
+            form.addEventListener('submit',(event)=>{
+                event.preventDefault();
+                const myMessage = inputField.value;
+                
+                if(myMessage != null){
+                    if(Username == null){
+                        alert("Are you one of us? Reload to enter Username")
+                        window.location.reload
+                        return false;
+                    }
+                    socket.emit("message",{
+                        "username":Username,
+                        "message": myMessage
+                    });
+                    
+                }
+                inputField.value = '';
+                return false;
+            })
+
+        }
+        document.onload  = chat();
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+{
+  "name": "web-socket-chat",
+  "version": "1.0.0",
+  "description": "A minimal socket.io chatting app",
+  "main": "App.js",
+  "scripts": {
+    "test": "echo 'No tests Yet'",
+    "start": "node App"
+  },
+  "keywords": [
+    "Chatting"
+  ],
+  "author": "Oyamo Brian",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^2.3.0"
+  }
+}

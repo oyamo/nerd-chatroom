@@ -1,0 +1,50 @@
+body{
+    padding: 10;
+    margin: 0;
+    font-family: monospace;
+}
+h1{
+    text-align: center;
+}
+form{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background: red;
+}
+.input{
+    width: fit-content;
+}
+.messages{
+    padding: 20px;
+    overflow-y: scroll;
+}
+.username{
+    font-weight: bold;
+}
+
+.me-box, .recipient-box{
+    display: flex;
+    flex-direction: column;
+    background-color: darkgrey;
+    padding: 5px;
+    width: 90%;
+    margin-top: 20px;
+}
+.me-box *, .recipient-box *{
+    margin: 10px;
+}
+.recipient-box{
+    color: brown;
+    margin-right: 5%;
+    border-radius: 10px 10px 10px 10px;
+}
+.me-box{
+    color: darkgreen;
+    list-style: none;
+    margin-left: 5%;
+    border-radius: 10px 10px 10px 10px;
+}
