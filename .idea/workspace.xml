@@ -28,10 +28,7 @@
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/WiredTiger.turtle" beforeDir="false" afterPath="$PROJECT_DIR$/data/WiredTiger.turtle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/WiredTiger.wt" beforeDir="false" afterPath="$PROJECT_DIR$/data/WiredTiger.wt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/collection-4--2506331118676671095.wt" beforeDir="false" afterPath="$PROJECT_DIR$/data/collection-4--2506331118676671095.wt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/diagnostic.data/metrics.2020-10-07T05-50-33Z-00000" beforeDir="false" afterPath="$PROJECT_DIR$/data/diagnostic.data/metrics.2020-10-07T05-50-33Z-00000" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/diagnostic.data/metrics.interim" beforeDir="false" afterPath="$PROJECT_DIR$/data/diagnostic.data/metrics.interim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/index-6--2506331118676671095.wt" beforeDir="false" afterPath="$PROJECT_DIR$/data/index-6--2506331118676671095.wt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/journal/WiredTigerLog.0000000001" beforeDir="false" afterPath="$PROJECT_DIR$/data/journal/WiredTigerLog.0000000001" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/sizeStorer.wt" beforeDir="false" afterPath="$PROJECT_DIR$/data/sizeStorer.wt" afterDir="false" />
     </list>
@@ -92,7 +89,7 @@
       <workItem from="1601915259145" duration="5855000" />
       <workItem from="1601925729575" duration="4615000" />
       <workItem from="1601960040004" duration="16354000" />
-      <workItem from="1602045205890" duration="27207000" />
+      <workItem from="1602045205890" duration="28196000" />
     </task>
     <servers />
   </component>
