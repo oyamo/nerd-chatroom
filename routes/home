@@ -1,0 +1,17 @@
+const express = require('express');
+const htmpath = require('./getpath');
+const auth = require('../middleware/auth')
+const router = express.Router()
+
+router.get('/',auth, (req, response)=>{
+    if(req.isLoggedin){
+        console.log(req.user)
+        response.render('chatscreen', req.user);
+    }else{
+        response.sendFile(htmpath('homepage.html'));
+    }
+});
+
+
+
+module.exports = router

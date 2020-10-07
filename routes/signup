@@ -1,0 +1,88 @@
+const express = require('express');
+const htmpath = require('./getpath');
+const User = require('../models/user');
+const auth = require('../middleware/auth')
+const router = express.Router()
+
+router.get('/', auth, (req, res)=>{
+
+    if(req.isLoggedin){
+        res.sendFile(htmpath('chatscreen.ejs'));
+    }else{
+        let errs = {
+            username: '',
+            fullnames: '',
+            password: '',
+            confirm: '',
+            country: '',
+            county: ''
+        }
+        res.render('signup', errs);
+    }
+});
+
+router.post('/', auth, async (req, res) =>{
+    const username = req.body.username || '';
+    const fullnames = req.body.fullnames || '';
+    const password = req.body.password || '';
+    const confirm = req.body.confirm || '';
+    const country = req.body.country || ''
+    const county = req.body.county || '';
+    const gender = req.body.gender || 'Other';
+
+    let errs = {
+        username: /^[0-9A-Za-z]{1,12}$/.test(username) ? '' : 'Username must be less than 12 letters and include only letters or numbers',
+        fullnames: /^[A-Za-z.\s]{2,30}$/.test(fullnames) ? '' : 'Name  must not contain any special letters and is less than 30 letters',
+        password: /^.{8,64}$/.test(password) ? '' : 'Password be 8-64 letters long',
+        confirm: password === confirm ? '' : 'Passwords do not match',
+        country: /^[A-Za-z\s]{1,20}$/.test(country) ? '' : 'Invalid country name',
+        county: /^[A-Za-z\s]{1,20}$/.test(county) ? '' : 'Invalid county/state name',
+    };
+    const hasErrors = async () =>{
+        const values = Object.values(errs);
+        return values.find(val => val !== '') || false
+    }
+    const hasErrs = await hasErrors();
+    console.log(hasErrs)
+    if(true == hasErrs){
+        console.log('I have no errors but im running')
+        return res.render('signup', errs);
+    }else{
+        const user = await User.findOne({username : username}).exec()
+        if(user == null){
+
+            const user = new User({
+                fullNames: fullnames,
+                username: username,
+                passWord: password,
+                gender: gender,
+                county: county,
+                country: country
+            });
+
+            user.save((err, user)=>{
+                if(err){
+                    console.log(err);
+                }else{
+                    user.generateToken()
+                        .then(async user=>{
+                            await user.updateLastSeen()
+                            res.cookie('auth', user.loginToken, {});
+                            res.redirect('/');
+                        })
+                        .catch(err => {
+                            console.log(err);
+                        })
+                }
+            });
+        }else {
+            errs.username = "Username not available";
+            return res.render('signup', errs);
+        }
+    }
+
+})
+
+
+
+module.exports = router

@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:heroku" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e49a968a-b355-4ffe-a944-19aa48caa60b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/web-socket-chat.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/App.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/www.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/WiredTiger" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/WiredTiger.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/WiredTiger.turtle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/WiredTiger.wt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/WiredTigerHS.wt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/_mdb_catalog.wt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/collection-0--2506331118676671095.wt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/collection-2--2506331118676671095.wt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/collection-4--2506331118676671095.wt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/collection-7--2506331118676671095.wt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/diagnostic.data/metrics.2020-10-07T05-50-33Z-00000" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/diagnostic.data/metrics.interim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/index-1--2506331118676671095.wt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/index-3--2506331118676671095.wt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/index-5--2506331118676671095.wt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/index-6--2506331118676671095.wt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/index-8--2506331118676671095.wt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/index-9--2506331118676671095.wt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/journal/WiredTigerLog.0000000001" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/journal/WiredTigerPreplog.0000000001" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/journal/WiredTigerPreplog.0000000002" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/mongod.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/sizeStorer.wt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/storage.bson" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/engine/chatprocessor.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/middleware/auth.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/user.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/mdb.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/homepage.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/mdb.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/routes/getpath.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/routes/home" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/routes/login" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/routes/signup" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stock.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/chatscreen.ejs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/login.ejs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/signup.ejs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/users.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1iSyOdDkAS0HW3Qtakvqq3ORgyQ" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="javascript.nodejs.core.library.configured.version" value="10.21.0" />
+    <property name="javascript.nodejs.core.library.typings.version" value="10.17.35" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/bin/www.js" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/views" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="SmallTalk" type="NodeJSConfigurationType" path-to-js-file="bin/www.js" working-dir="$PROJECT_DIR$">
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e49a968a-b355-4ffe-a944-19aa48caa60b" name="Default Changelist" comment="" />
+      <created>1601915257235</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1601915257235</updated>
+      <workItem from="1601915259145" duration="5855000" />
+      <workItem from="1601925729575" duration="4615000" />
+      <workItem from="1601960040004" duration="16354000" />
+      <workItem from="1602045205890" duration="26715000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="0" y="24" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1601973772200">
+      <screen x="0" y="24" width="1024" height="720" />
+    </state>
+    <state x="0" y="24" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.24.1024.720@0.24.1024.720" timestamp="1601973772200" />
+    <state x="303" y="189" width="416" height="381" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1602067391928">
+      <screen x="0" y="24" width="1024" height="720" />
+    </state>
+    <state x="303" y="189" width="416" height="381" key="#com.intellij.fileTypes.FileTypeChooser/0.24.1024.720@0.24.1024.720" timestamp="1602067391928" />
+    <state x="245" y="133" width="524" height="493" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1602078220842">
+      <screen x="0" y="24" width="1024" height="720" />
+    </state>
+    <state x="245" y="133" width="524" height="493" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.24.1024.720@0.24.1024.720" timestamp="1602078220842" />
+    <state x="295" y="124" width="424" height="479" key="FileChooserDialogImpl" timestamp="1601973770990">
+      <screen x="0" y="24" width="1024" height="720" />
+    </state>
+    <state x="295" y="124" width="424" height="479" key="FileChooserDialogImpl/0.24.1024.720@0.24.1024.720" timestamp="1601973770990" />
+    <state width="1003" height="275" key="GridCell.Tab.0.bottom" timestamp="1602069851405">
+      <screen x="0" y="24" width="1024" height="720" />
+    </state>
+    <state width="1003" height="275" key="GridCell.Tab.0.bottom/0.24.1024.720@0.24.1024.720" timestamp="1602069851405" />
+    <state width="1003" height="275" key="GridCell.Tab.0.center" timestamp="1602069851404">
+      <screen x="0" y="24" width="1024" height="720" />
+    </state>
+    <state width="1003" height="275" key="GridCell.Tab.0.center/0.24.1024.720@0.24.1024.720" timestamp="1602069851404" />
+    <state width="1003" height="275" key="GridCell.Tab.0.left" timestamp="1602069851404">
+      <screen x="0" y="24" width="1024" height="720" />
+    </state>
+    <state width="1003" height="275" key="GridCell.Tab.0.left/0.24.1024.720@0.24.1024.720" timestamp="1602069851404" />
+    <state width="1003" height="275" key="GridCell.Tab.0.right" timestamp="1602069851405">
+      <screen x="0" y="24" width="1024" height="720" />
+    </state>
+    <state width="1003" height="275" key="GridCell.Tab.0.right/0.24.1024.720@0.24.1024.720" timestamp="1602069851405" />
+    <state width="1003" height="2" key="GridCell.Tab.1.bottom" timestamp="1602054910188">
+      <screen x="0" y="24" width="1024" height="720" />
+    </state>
+    <state width="1003" height="2" key="GridCell.Tab.1.bottom/0.24.1024.720@0.24.1024.720" timestamp="1602054910188" />
+    <state width="1003" height="2" key="GridCell.Tab.1.center" timestamp="1602054910187">
+      <screen x="0" y="24" width="1024" height="720" />
+    </state>
+    <state width="1003" height="2" key="GridCell.Tab.1.center/0.24.1024.720@0.24.1024.720" timestamp="1602054910187" />
+    <state width="1003" height="2" key="GridCell.Tab.1.left" timestamp="1602054910187">
+      <screen x="0" y="24" width="1024" height="720" />
+    </state>
+    <state width="1003" height="2" key="GridCell.Tab.1.left/0.24.1024.720@0.24.1024.720" timestamp="1602054910187" />
+    <state width="1003" height="2" key="GridCell.Tab.1.right" timestamp="1602054910188">
+      <screen x="0" y="24" width="1024" height="720" />
+    </state>
+    <state width="1003" height="2" key="GridCell.Tab.1.right/0.24.1024.720@0.24.1024.720" timestamp="1602054910188" />
+    <state width="1003" height="2" key="GridCell.Tab.2.bottom" timestamp="1602054910190">
+      <screen x="0" y="24" width="1024" height="720" />
+    </state>
+    <state width="1003" height="2" key="GridCell.Tab.2.bottom/0.24.1024.720@0.24.1024.720" timestamp="1602054910190" />
+    <state width="1003" height="2" key="GridCell.Tab.2.center" timestamp="1602054910189">
+      <screen x="0" y="24" width="1024" height="720" />
+    </state>
+    <state width="1003" height="2" key="GridCell.Tab.2.center/0.24.1024.720@0.24.1024.720" timestamp="1602054910189" />
+    <state width="1003" height="2" key="GridCell.Tab.2.left" timestamp="1602054910189">
+      <screen x="0" y="24" width="1024" height="720" />
+    </state>
+    <state width="1003" height="2" key="GridCell.Tab.2.left/0.24.1024.720@0.24.1024.720" timestamp="1602054910189" />
+    <state width="1003" height="2" key="GridCell.Tab.2.right" timestamp="1602054910189">
+      <screen x="0" y="24" width="1024" height="720" />
+    </state>
+    <state width="1003" height="2" key="GridCell.Tab.2.right/0.24.1024.720@0.24.1024.720" timestamp="1602054910189" />
+    <state width="1003" height="2" key="GridCell.Tab.3.bottom" timestamp="1602054910191">
+      <screen x="0" y="24" width="1024" height="720" />
+    </state>
+    <state width="1003" height="2" key="GridCell.Tab.3.bottom/0.24.1024.720@0.24.1024.720" timestamp="1602054910191" />
+    <state width="1003" height="2" key="GridCell.Tab.3.center" timestamp="1602054910191">
+      <screen x="0" y="24" width="1024" height="720" />
+    </state>
+    <state width="1003" height="2" key="GridCell.Tab.3.center/0.24.1024.720@0.24.1024.720" timestamp="1602054910191" />
+    <state width="1003" height="2" key="GridCell.Tab.3.left" timestamp="1602054910190">
+      <screen x="0" y="24" width="1024" height="720" />
+    </state>
+    <state width="1003" height="2" key="GridCell.Tab.3.left/0.24.1024.720@0.24.1024.720" timestamp="1602054910190" />
+    <state width="1003" height="2" key="GridCell.Tab.3.right" timestamp="1602054910191">
+      <screen x="0" y="24" width="1024" height="720" />
+    </state>
+    <state width="1003" height="2" key="GridCell.Tab.3.right/0.24.1024.720@0.24.1024.720" timestamp="1602054910191" />
+    <state x="73" y="114" width="867" height="530" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1601920197770">
+      <screen x="0" y="24" width="1024" height="720" />
+    </state>
+    <state x="73" y="114" width="867" height="530" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.24.1024.720@0.24.1024.720" timestamp="1601920197770" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/routes/signup</url>
+          <line>62</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/routes/signup</url>
+          <line>64</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/routes/signup</url>
+          <line>66</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/routes/signup</url>
+          <line>67</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/routes/signup</url>
+          <line>70</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/routes/signup</url>
+          <line>72</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/routes/signup</url>
+          <line>73</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/routes/signup</url>
+          <line>54</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/routes/signup</url>
+          <line>50</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/routes/signup</url>
+          <line>40</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/routes/signup</url>
+          <line>46</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/routes/signup</url>
+          <line>32</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/routes/signup</url>
+          <line>44</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/routes/signup</url>
+          <line>41</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/routes/signup</url>
+          <line>33</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/routes/signup</url>
+          <line>42</line>
+          <properties lambdaOrdinal="0" />
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/routes/signup</url>
+          <line>45</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/routes/signup</url>
+          <line>47</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

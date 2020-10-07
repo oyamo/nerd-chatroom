@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SmallTalk Users</title>
+    <style type="text/css">
+        html, body{
+            background: linear-gradient(#0e0e0d, #0a090a) no-repeat;
+            background-size: contain;
+            font-family: 'Courier New', Courier, monospace;
+            color: burlywood;
+            /* height: 100%; */
+            padding: 0;
+            margin: 0;
+            min-height: 100%;
+        }
+        main{
+            display: flex;
+            flex-direction: column;
+
+        }
+        .user{
+            display: flex;
+            flex-direction: row;
+            border-radius: 4px;
+            background: radial-gradient(circle at bottom center , #444444 15px, #0f0e0e);
+            box-shadow: 0 10px 10px  -5px rgba(0,0,0,.2);
+            padding: 10px;
+            margin: 5px 20px;
+        }
+        .user img{
+            border-radius: 50%;
+            height: 50px;
+            width: 50px;
+            background: #8d6e63;
+            margin-right: 20px;
+        }
+        h3{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h3>Select a user n chat</h3>
+    <main>
+        <div class="user">
+            <img class="avatar" src="https://image.flaticon.com/icons/svg/145/145867.svg" alt=""/>
+            <div class="details">
+                <div>Oyamo</div>
+                <div>@oyamo</div>
+            </div>
+        </div>
+        <div class="user">
+            <img class="avatar" src="https://image.flaticon.com/icons/svg/145/145867.svg"alt=""/>
+            <div class="details">
+                <div>Oyamo</div>
+                <div>@oyamo</div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

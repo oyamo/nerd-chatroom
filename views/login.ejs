@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Small Talk</title>
+    <link href="./css/bootstrap.min.css" rel="stylesheet" />
+    <link href="./css/mdb.min.css" rel="stylesheet" />
+    <style>
+        html {
+            height: 100%;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100%;
+            background: linear-gradient(#0e0e0d, #0a090a) no-repeat;
+            background-size: contain;
+            font-family: 'Courier New', Courier, monospace;
+            color: burlywood;
+        }
+        .container{
+            flex: 1;
+        }
+       .mnav{
+            width: 100%;
+            height: 40px;
+            padding: 5px;
+        }
+        footer{
+            margin-top: 50px;
+            padding: 10px;
+            text-align: center;
+        }
+        .input{
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+        .warning{
+            font-size: .5em;
+        }
+        .btn{
+            width: 90%;
+            margin-left: 8%;
+            margin-top: 20px;
+        }
+        fieldset{
+            text-align: start;
+        }
+        fieldset input{
+            outline: burlywood;
+            text-align: start;
+            background-color: rgb(39, 29, 39);
+            border-color: rgb(39, 29, 39);
+            border-radius: 4px;
+            caret-color: darksalmon;
+            font-weight: bold;
+            padding: 10px;
+            width: 90%;
+            margin: auto auto;
+            color: gainsboro;
+            font-variant-caps: titling-caps;
+            text-transform: capitalize;
+            font-style: italic;
+            text-shadow: 0 10px 10px  -5px rgba(0,0,0,.2);
+            box-shadow: 0 10px 10px  -5px rgba(0,0,0,.2);
+        }
+        form{
+            text-align: center;
+        }
+        .submit{
+            grid-column: 1;
+            padding: 10px 5px;
+            text-decoration: none;
+            font-weight: bold;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 4px;
+            margin-top: 10px;
+            width: 250px;
+            box-shadow: 0 10px 10px  -5px rgba(0,0,0,.5);
+            background: linear-gradient(wheat,#3b3b1a);
+            color: #0e0e0d;
+        }
+
+        .submit:hover{
+            transition: .3s;
+            box-shadow: 1px 1px 6px hotpink , 1px 1px 6px #ccc;
+        }
+        p{
+            text-align: start;
+        }
+    </style>
+</head>
+<body>
+    <div class='mnav bg-dark'><div class="text-light">Small Talk</div></div>
+    <div class="container">
+        <h2>Login</h2>
+        <form method='post'>
+            <p class="deep-purple-text">Please identify yourself to continue</p>
+            <fieldset>
+                <label>Username</label>
+                <input type="text" required name="idno"/>
+            </fieldset>
+            <p class='warning text-danger'><%= username %></p>
+            <fieldset>
+                <label>Password</label>
+                <input type="text" required name="password"/>
+            </fieldset>
+            <p class='warning text-danger'><%= password %></p>
+
+            <input type="submit" class="submit" value="login">
+        </form>
+    </div>
+    <footer class="bg-dark text-light">
+        &copy; 2020 - Oyasis
+    </footer>
+</body>

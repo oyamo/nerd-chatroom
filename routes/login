@@ -1,0 +1,49 @@
+const express = require('express');
+const htmpath = require('./getpath');
+const auth = require('../middleware/auth');
+const User = require('../models/user');
+
+const router = express.Router()
+router.get('/',  auth ,async (req, res)=>{
+    if(req.isLoggedin){
+        res.redirect('/');
+    }else{
+       res.render('login', {password: '', username: ''})
+    }
+});
+
+router.post('/', auth, async (req, res) =>{
+    if(req.isLoggedin){
+        res.redirect('/');
+    }else{
+        const password = req.body.password || '';
+        const username = req.body.idno || '';
+        let errs = {password: '', username: ''};
+        const user = await User.findOne({username: username}).exec();
+        if( user != null){
+            const match = await user.attemptLogin(password);
+            if(match){
+                user.generateToken()
+                    .then(async user=>{
+                        await user.updateLastSeen()
+                        res.cookie('auth', user.loginToken, {});
+                        res.redirect('/');
+                    })
+                    .catch(err => {
+                        console.log(err);
+                    })
+            }else{
+                errs.password = "Password incorrect";
+                res.render('login', errs);
+            }
+        }else{
+            errs.username = "Username does not exist, go back and sign up";
+            res.render('login', errs);
+        }
+
+    }
+})
+
+
+
+module.exports = router
