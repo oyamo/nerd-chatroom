@@ -38,6 +38,11 @@
             background: #8d6e63;
             margin-right: 20px;
         }
+        a{
+            font-family: 'Courier New', Courier, monospace;
+            color: burlywood;
+            text-decoration: none;
+        }
         h3{
             text-align: center;
         }
@@ -46,20 +51,15 @@
 <body>
     <h3>Select a user n chat</h3>
     <main>
-        <div class="user">
+        <% for(var i= 0; i < users.length;i++ ){ %>
+        <a class="user" href="/c/chat@<%=users[i].username%>">
             <img class="avatar" src="https://image.flaticon.com/icons/svg/145/145867.svg" alt=""/>
             <div class="details">
-                <div>Oyamo</div>
-                <div>@oyamo</div>
+                <div><%= users[i].fullNames%></div>
+                <div>@<%=users[i].username%></div>
             </div>
-        </div>
-        <div class="user">
-            <img class="avatar" src="https://image.flaticon.com/icons/svg/145/145867.svg"alt=""/>
-            <div class="details">
-                <div>Oyamo</div>
-                <div>@oyamo</div>
-            </div>
-        </div>
+        </a>
+        <% }%>
     </main>
 </body>
 </html>

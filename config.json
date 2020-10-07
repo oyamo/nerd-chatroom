@@ -1,4 +1,4 @@
 {
     "PORT": 5000,
-    "MONGODB": "mongodb+srv://Oyasis:brianoti1@pollcluster.mm0jl.mongodb.net/SmallTalK?retryWrites=true&w=majority"
+    "MONGODB": "mongodb+srv://Oyasis:brianoti1@pollcluster.mm0jl.mongodb.net/SmallTalk?retryWrites=true&w=majority"
 }

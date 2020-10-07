@@ -6,11 +6,12 @@
 // < Dependencies >
 const express = require('express');
 const config = require('./config.json');
-const socketIO = require('socket.io');
 const http = require('http');
 const cookieparser = require('cookie-parser');
 const mongoose = require('mongoose');
 const logger = require('morgan');
+const ChatEngine = require('./engine/chatengine')
+const socketIO = require('socket.io');
 // </ Dependencies >
 
 // <Routers>
@@ -22,7 +23,7 @@ const signup = require('./routes/signup');
 // < Initialisations >
 const app = express();
 const httpServer = http.createServer(app);
-const roomSocket = socketIO(httpServer);
+const io = socketIO(httpServer);
 // </ Initialisations >
 
 // < MiddleWares >
@@ -37,7 +38,12 @@ app.set('view engine', 'ejs');
 
 // <Database>
 mongoose.Promise = global.Promise
-mongoose.connect(config.MONGODB,{useNewUrlParser: true, useUnifiedTopology: true}, (err)=>{
+mongoose.connect(config.MONGODB,
+    {
+        useNewUrlParser: true,
+        useUnifiedTopology: true
+    },
+    (err)=>{
     if(err){
         console.log(err.message);
     }else{
@@ -48,24 +54,12 @@ mongoose.connect(config.MONGODB,{useNewUrlParser: true, useUnifiedTopology: true
 
 
 // <Use the routes>
-app.use('/',home);
+app.use('/',home(httpServer));
 app.use('/login', login);
 app.use('/register', signup);
 
-// HomePage
-roomSocket.on('connection',(socket)=>{
-    console.log("Socket")
-    socket.on('message',(message)=>{
-        message['time'] = new Date();
-        roomSocket.sockets.emit("broadcast",message);
-        console.log(message)
-    })
-    socket.on('disconnect', ()=>{
-        // Broadcast or save last seen
-    });
-});
-
-
-// Listen & Serve!!
+const chatEngine = new ChatEngine();
+chatEngine.socketIO = io;
+chatEngine.startChat();
 
 module.exports = httpServer;

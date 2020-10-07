@@ -178,7 +178,29 @@
     </header>
 
     <main class="chat">
+        <%
+            function formatDate(date) {
+                const h = "0" + date.getHours();
+                const m = "0" + date.getMinutes();
 
+                return `${h.slice(-2)}:${m.slice(-2)}`;
+            }
+        %>
+        <% for(var i=0; i<chats.length; i++){%>
+            <%const side = chats[i].senderId !== user.username ? "left": "right"%>
+            <div class="msg <%=side%>-msg">
+                <div class="msg-img" style="background-image: url(https://image.flaticon.com/icons/svg/145/145867.svg)"></div>
+
+                <div class="msg-bubble">
+                    <div class="msg-info">
+                        <div class="msg-info-name"><%= chats[i].senderId%></div>
+                        <div class="msg-info-time"><%=formatDate(chats[i].chatDate)%></div>
+                    </div>
+
+                    <div class="msg-text"><%=chats[i].message%></div>
+                </div>
+            </div>
+        <%}%>
     </main>
 
     <form class="chat-form">
@@ -188,24 +210,16 @@
 </section>
     <script src="/socket.io/socket.io.js"></script>
     <script>
-        const socket = io();
+        const socket = io('http://localhost:5000');
         const msgForm = get(".chat-form");
         const msgInput = get(".chat-input");
         const msgChat = get(".chat");
 
-        const BOT_MSGS = [
-            "Hi, how are you?",
-            "Ohh... I can't understand what you trying to say. Sorry!",
-            "I like to play games... But I don't know how to play!",
-            "Sorry if my answers are not relevant. :))",
-            "I feel sleepy! :("];
 
-
-        // Icons made by Freepik from www.flaticon.com
-        const BOT_IMG = "https://image.flaticon.com/icons/svg/327/327779.svg";
+        const CHAT_WITH = "https://image.flaticon.com/icons/svg/145/145867.svg";
         const PERSON_IMG = "https://image.flaticon.com/icons/svg/145/145867.svg";
-        const BOT_NAME = "BOT";
-        const PERSON_NAME = "<%= username%>";
+        const BOT_NAME = "<%= chatWith.username%>";
+        const PERSON_NAME = "<%= user.username%>";
 
         msgForm.addEventListener("submit", event => {
             event.preventDefault();
@@ -214,9 +228,12 @@
             if (!msgText) return;
 
             appendMessage(PERSON_NAME, PERSON_IMG, "right", msgText);
+            const cookie = Object.fromEntries(document.cookie.split(/; */).map(cookie=>cookie.split('=',2)))
             socket.emit("message",{
                 "username":PERSON_NAME,
-                "message": msgText
+                "receiver": BOT_NAME,
+                "message": msgText,
+                "auth": cookie.auth
             });
             msgInput.value = "";
 
@@ -245,8 +262,10 @@
         }
 
         function botResponse(msg) {
-            const {username, message, time} = msg;
-            appendMessage(username, BOT_IMG, "left", message);
+           if(msg!==undefined){
+               const {username, message, time} = msg;
+               appendMessage(username, CHAT_WITH, "left", message);
+           }
         }
 
         // Utils
@@ -264,7 +283,8 @@
         function random(min, max) {
             return Math.floor(Math.random() * (max - min) + min);
         }
-        socket.on('broadcast',msg=>{
+
+        socket.on(PERSON_NAME,msg=>{
             console.log(msg)
             const {username, message, time} = msg;
             if(username !== PERSON_NAME){

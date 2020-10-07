@@ -1,17 +1,93 @@
 const express = require('express');
-const htmpath = require('./getpath');
 const auth = require('../middleware/auth')
+const User = require('../models/user');
+const Chat = require('../models/chat');
 const router = express.Router()
+const socketIO = require('socket.io');
+const htmpath = require('./getpath');
+const he = require('he');
+//
+// class ChatEngine{
+//     constructor() {
+//         this.user = null;
+//         this.chatWith = null;
+//         this.chatSocket = null
+//     }
+//     setUser(user){
+//         console.log(`@${user.username} Wants To chat`)
+//         this.user = user;
+//     }
+//     setChatWith(chatWith){
+//         console.log(`Chatting with@${chatWith.username} `)
+//         this.chatWith = chatWith;
+//     }
+//     setSocket(socket){
+//         this.chatSocket = socket;
+//     }
+//
+//     startChat(){
+//         const listenerDaemon = setInterval(function (){
+//             if(
+//                 this.user != null &&
+//                 this.chatWith != null &&
+//                 this.chatSocket != null
+//             ) {
+//                 clearInterval(listenerDaemon);
+//                 this.chatSocket.on('connection',(socket)=> {
+//                     console.log(`${this.user.username} is Online`)
+//                     socket.on('message', (message) => {
+//                         message['time'] = new Date();
+//                         this.chatSocket.sockets.emit("broadcast", message);
+//                         console.log(`${this.user.username} sent a message to ${this.chatWith.username}`);
+//                     })
+//                     socket.on('disconnect', () => {
+//                         console.log(`${this.user.username} disconnected`)
+//                     });
+//                 });
+//             }
+//         },200)
+//     }
+//
+//
+// }
 
-router.get('/',auth, (req, response)=>{
-    if(req.isLoggedin){
-        console.log(req.user)
-        response.render('chatscreen', req.user);
-    }else{
-        response.sendFile(htmpath('homepage.html'));
-    }
-});
+module.exports = (httpServer) =>{
+    router.get('/',auth, async (req, response)=>{
+        if(req.isLoggedin){
+            console.log(req.user)
+            const allUsers = await User.find().exec();
+            console.log(allUsers);
+            const allExceptme = allUsers.filter(i=>i.username !== req.user.username)
+            response.render('users', {users: allExceptme});
+        }else{
+            response.sendFile(htmpath('homepage.html'));
+        }
+    });
+    router.use('/c/chat@:id', auth, async (req, res) => {
+        if(req.isLoggedin){
+            // Escape HTML tags
+            const username = he.encode(req.params.id || '');
+            const chatWith = await User.findOne({username: username}).exec();
+            if(chatWith == null){
 
+                return res.status(404)
+                    .send(`<br><br><center><h1>SmallTalk User @${username} Not found</h1></center>`)
+            }
+            const allChats = await Chat.find({
+                $or:[
+                    {senderId : username, receiverId: req.user.username },
+                    {senderId : req.user.username , receiverId: username}
+                ]
+            }).exec()
 
+            res.render('chatscreen', {user: req.user, chatWith: chatWith, chats: allChats});
 
-module.exports = router
+        }else{
+
+            res.sendFile(htmpath('homepage.html'));
+        }
+    });
+
+    return router
+
+}
