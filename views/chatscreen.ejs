@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta 
         name="description" 
-        content="Chatting with. <%$= null%>"
+        content="Chatting with. <%= chatWith.username%><%$= null%>"
     />
     <link rel="stylesheet" href="/App.css"/>
     <title>Small talk</title>
@@ -170,7 +170,7 @@
 <section class="chatbox">
     <header class="chatbox-header">
         <div class="chatbox-header-title">
-            <i class="fas fa-comment-alt"></i> Small Talk
+            <i class="fas fa-comment-alt"></i>  @<%= chatWith.username%>
         </div>
         <div class="chatbox-header-options">
             <span><i class="fas fa-cog"></i></span>
