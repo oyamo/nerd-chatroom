@@ -25,59 +25,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e49a968a-b355-4ffe-a944-19aa48caa60b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/web-socket-chat.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/App.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/www.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/WiredTiger" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/WiredTiger.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/WiredTiger.turtle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/WiredTiger.wt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/WiredTigerHS.wt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/_mdb_catalog.wt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/collection-0--2506331118676671095.wt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/collection-2--2506331118676671095.wt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/collection-4--2506331118676671095.wt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/collection-7--2506331118676671095.wt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/diagnostic.data/metrics.2020-10-07T05-50-33Z-00000" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/diagnostic.data/metrics.interim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/index-1--2506331118676671095.wt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/index-3--2506331118676671095.wt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/index-5--2506331118676671095.wt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/index-6--2506331118676671095.wt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/index-8--2506331118676671095.wt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/index-9--2506331118676671095.wt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/journal/WiredTigerLog.0000000001" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/journal/WiredTigerPreplog.0000000001" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/journal/WiredTigerPreplog.0000000002" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/mongod.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/sizeStorer.wt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/storage.bson" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/engine/chatprocessor.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/middleware/auth.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/user.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/mdb.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/homepage.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/jquery.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/mdb.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/routes/getpath.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/routes/home" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/routes/login" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/routes/signup" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/chatscreen.ejs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/login.ejs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/signup.ejs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/users.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/WiredTiger.turtle" beforeDir="false" afterPath="$PROJECT_DIR$/data/WiredTiger.turtle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/WiredTiger.wt" beforeDir="false" afterPath="$PROJECT_DIR$/data/WiredTiger.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/collection-4--2506331118676671095.wt" beforeDir="false" afterPath="$PROJECT_DIR$/data/collection-4--2506331118676671095.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/diagnostic.data/metrics.2020-10-07T05-50-33Z-00000" beforeDir="false" afterPath="$PROJECT_DIR$/data/diagnostic.data/metrics.2020-10-07T05-50-33Z-00000" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/diagnostic.data/metrics.interim" beforeDir="false" afterPath="$PROJECT_DIR$/data/diagnostic.data/metrics.interim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/index-6--2506331118676671095.wt" beforeDir="false" afterPath="$PROJECT_DIR$/data/index-6--2506331118676671095.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/journal/WiredTigerLog.0000000001" beforeDir="false" afterPath="$PROJECT_DIR$/data/journal/WiredTigerLog.0000000001" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/sizeStorer.wt" beforeDir="false" afterPath="$PROJECT_DIR$/data/sizeStorer.wt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,7 +92,7 @@
       <workItem from="1601915259145" duration="5855000" />
       <workItem from="1601925729575" duration="4615000" />
       <workItem from="1601960040004" duration="16354000" />
-      <workItem from="1602045205890" duration="26715000" />
+      <workItem from="1602045205890" duration="27207000" />
     </task>
     <servers />
   </component>
