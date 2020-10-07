@@ -6,6 +6,7 @@
 .pnp.js
 data
 /data
+/data/*
 
 # testing
 /coverage
