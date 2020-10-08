@@ -67,7 +67,7 @@ module.exports = (httpServer) =>{
         if(req.isLoggedin){
             // Escape HTML tags
             const username = he.encode(req.params.id || '');
-            const chatWith = await User.findOne({username: username}).exec();
+            const chatWith = await User.findOne({username: req.params.id}).exec();
             if(chatWith == null){
 
                 return res.status(404)
