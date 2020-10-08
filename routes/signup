@@ -53,7 +53,7 @@ router.post('/', auth, async (req, res) =>{
 
             const user = new User({
                 fullNames: fullnames,
-                username: username,
+                username: username.trim(),
                 passWord: password,
                 gender: gender,
                 county: county,
