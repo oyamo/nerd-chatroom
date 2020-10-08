@@ -24,7 +24,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e49a968a-b355-4ffe-a944-19aa48caa60b" name="Default Changelist" comment="" />
+    <list default="true" id="e49a968a-b355-4ffe-a944-19aa48caa60b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/views/chatscreen.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/chatscreen.ejs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -82,7 +84,7 @@
       <workItem from="1601915259145" duration="5855000" />
       <workItem from="1601925729575" duration="4615000" />
       <workItem from="1601960040004" duration="16354000" />
-      <workItem from="1602045205890" duration="60598000" />
+      <workItem from="1602045205890" duration="61591000" />
     </task>
     <servers />
   </component>
